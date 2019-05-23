@@ -1,0 +1,6 @@
+<filtro [placeHolder]="placeHolder" [(value)]="filtro"></filtro>
+<ul>
+  <li *ngFor="let item of Usarios">
+    <a class="nav-link" routerLink="/Usuarios/{{item.id}}">{{item.nombre}}</a>
+  </li>
+</ul>

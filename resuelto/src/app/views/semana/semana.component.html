@@ -1,0 +1,6 @@
+<div>
+  <filtro [placeHolder]="placeHolder" [(value)]="filtro"></filtro>
+  <p *ngFor="let item of aDias">
+    <span *ngIf="!filtro || item.toUpperCase().startsWith(filtro.toUpperCase())">{{item}}</span>
+  </p>
+</div>
