@@ -7,13 +7,17 @@ import { PruebaComponent } from './components/prueba/prueba.component';
 import { MenuHorizontalComponent } from './components/shared/menu-horizontal/menu-horizontal.component';
 import { ContenidoComponent } from '@shared/contenido/contenido.component';
 import { SemanaComponent } from './views/semana/semana.component';
+import { HelloComponent } from './views/hello/hello.component';
+import { HomeComponent } from './views/home/home.component';
+import { UsuariosComponent } from './views/usuarios/usuarios.component';
+import { AboutComponent } from './views/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     ContenidoComponent, 
-    MenuHorizontalComponent, SemanaComponent
+    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,10 @@
 <div>
-  <ul>
-    <li *ngFor="let item of aDias">
-      {{
-        item
-      }}
-    </li>
-  </ul>
+  <div *ngFor="let item of aDias">
+    <span *ngIf="item.toUpperCase().startsWith('V')">{{
+      item
+    }} 
+  </span>
+    
 </div>
+</div>
+
