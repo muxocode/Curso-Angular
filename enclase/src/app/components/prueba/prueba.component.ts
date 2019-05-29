@@ -35,4 +35,14 @@ export class PruebaComponent implements OnInit {
     return this.texto+val;
   }
 
+  btnPresionado(evento:Event){
+    debugger;
+    alert("btn Presionado");
+  }
+
+  Encima(e:Event){
+    let oDiv = e.target as HTMLDivElement;
+    oDiv.style.color="red";
+  }
+
 }
