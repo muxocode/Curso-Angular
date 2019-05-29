@@ -10,7 +10,9 @@ export class PruebaComponent implements OnInit {
   texto:string
   mostrarImg=true;
   num=10;
-  aLista=[{name:"a"}, {name:"b"}, {name:"c"}]
+  aLista=[{name:"a"}, {name:"b"}, {name:"c"}];
+  sPlaceholder="Escriba aquí...";
+  sValue="hola";
   constructor() {
     this.texto="Prueba, hola mundo";
     var oPromise = new Promise(ok=>{

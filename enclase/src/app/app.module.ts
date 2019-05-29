@@ -12,13 +12,15 @@ import { HomeComponent } from './views/home/home.component';
 import { UsuariosComponent } from './views/usuarios/usuarios.component';
 import { AboutComponent } from './views/about/about.component';
 import { ItemUsuarioComponent } from './views/item-usuario/item-usuario.component';
+import { HijoComponent } from './components/hijo/hijo.component';
+import { PadreComponent } from './components/padre/padre.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     ContenidoComponent, 
-    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent
+    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent
   ],
   imports: [
     BrowserModule,
