@@ -14,13 +14,14 @@ import { AboutComponent } from './views/about/about.component';
 import { ItemUsuarioComponent } from './views/item-usuario/item-usuario.component';
 import { HijoComponent } from './components/hijo/hijo.component';
 import { PadreComponent } from './components/padre/padre.component';
+import { FiltroComponent } from './components/shared/filtro/filtro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     ContenidoComponent, 
-    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent
+    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent, FiltroComponent
   ],
   imports: [
     BrowserModule,

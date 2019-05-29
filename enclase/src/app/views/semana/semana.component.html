@@ -1,6 +1,7 @@
+<filtro [placeholder]="filtroPlaceHolder" (clicked)="Filtrar($event)"></filtro>
 <div>
-  <div *ngFor="let item of aDias">
-    <span *ngIf="item.toUpperCase().startsWith('V')">{{
+  <div *ngFor="let item of auxDias">
+    <span>{{
       item
     }} 
   </span>
