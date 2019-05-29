@@ -56,6 +56,30 @@ mkdir UsuarioService
 cd UsuarioService
 ng g s UsuarioService
 ```
+### Pipe
+```shell
+mkdir <ruta>
+cd <ruta>
+ng g p <ruta>
+```
+Ejemplo:
+```shell
+mkdir myPipe
+cd myPipe
+ng g p myPipe
+```
+### Directiva
+```shell
+mkdir <ruta>
+cd <ruta>
+ng g d <ruta>
+```
+Ejemplo:
+```shell
+mkdir myDirective
+cd myDirective
+ng g p myDirective
+```
 ## Instalar Bootstrap
 ```shell
 npm install bootstrap jquery popper

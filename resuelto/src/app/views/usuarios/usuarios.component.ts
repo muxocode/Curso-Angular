@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioModel } from '@entities/UsuarioModel';
 import { PruebaService } from 'src/app/services/prueba/prueba.service';
+import { UsuarioService } from 'src/app/services/UsuarioService/usuario.service';
 
 @Component({
   selector: 'usuarios',
@@ -18,7 +19,7 @@ export class UsuariosComponent implements OnInit {
   set Usuarios(val){
     this._Usuarios=val;
   }
-  constructor(private oPService:PruebaService) { 
+  constructor(private oPService:PruebaService, private UsuarioService:UsuarioService) { 
 
   }
 
@@ -33,9 +34,12 @@ export class UsuariosComponent implements OnInit {
   placeHolder="Escribe aquí..."
 
   ngOnInit() {
-    for (let i = 1; i < 20; i++) {
+    /*for (let i = 1; i < 20; i++) {
       this.Usarios.push({id:i, nombre:`Usuario${i}`, age:i, idRol:i});
-    }
+    }*/
+    this.UsuarioService.Get().then(x=>{
+      this.Usuarios=x;
+    })
   }
 
 }

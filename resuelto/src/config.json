@@ -1,0 +1,7 @@
+{
+    "api":"http://localhost:3004",
+    "data":{
+        "usuarios":"usuarios",
+        "dias":"dia"
+    }
+}

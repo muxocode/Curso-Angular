@@ -13,6 +13,19 @@ export class PruebaComponent implements OnInit {
   aLista=[{name:"a"}, {name:"b"}, {name:"c"}]
   constructor() {
     this.texto="Prueba, hola mundo";
+    var oPromise = new Promise(ok=>{
+      setTimeout(()=>{
+        ok("he terminado");
+      },3000);
+    })
+
+    
+    oPromise.then(x=>{
+      alert(x)
+    }).catch(x=>{
+      alert("error")
+    });
+    
    }
 
   ngOnInit() {
