@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PruebaService } from 'src/services/PruebaService/prueba.service';
 
 @Component({
   selector: 'prueba',
@@ -13,7 +14,15 @@ export class PruebaComponent implements OnInit {
   aLista=[{name:"a"}, {name:"b"}, {name:"c"}];
   sPlaceholder="Escriba aquí...";
   sValue="hola";
-  constructor() {
+
+
+  constructor(private PService:PruebaService) {
+
+    PService.Texto="He pasado por prueba";
+
+
+
+
     this.texto="Prueba, hola mundo";
     var oPromise = new Promise(ok=>{
       setTimeout(()=>{

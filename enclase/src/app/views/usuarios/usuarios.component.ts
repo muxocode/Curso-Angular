@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '@model/Usuario';
+import { UsuarioService } from 'src/services/UsuariosService/usuario.service';
 
 @Component({
   selector: 'usuarios',
@@ -8,10 +9,10 @@ import { Usuario } from '@model/Usuario';
 })
 export class UsuariosComponent implements OnInit {
   Usuarios:Usuario[]=[];
-  constructor() {
-    for (let index = 0; index < 100; index++) {
-      this.Usuarios.push({id:index,nombre:`Usuario_${index}`});
-    }
+  constructor(private UsService:UsuarioService) {
+    UsService.Get().then(data=>{
+      this.Usuarios=data;
+    })
    }
 
   ngOnInit() {

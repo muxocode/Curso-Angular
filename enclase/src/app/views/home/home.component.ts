@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PruebaService } from 'src/services/PruebaService/prueba.service';
 
 @Component({
   selector: 'home',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  texto:string;
+  constructor(private PService:PruebaService) {
+    this.texto = PService.Texto || "no hay valor";
+   }
 
   ngOnInit() {
   }

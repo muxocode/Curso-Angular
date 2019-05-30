@@ -17,6 +17,9 @@ import { PadreComponent } from './components/padre/padre.component';
 import { FiltroComponent } from './components/shared/filtro/filtro.component';
 import {FormsModule} from "@angular/forms";
 import { FiltroBindingComponent } from './components/shared/filtro-binding/filtro-binding.component'
+import { PruebaService } from 'src/services/PruebaService/prueba.service';
+import { environment, ConfigAccesor } from 'src/environments/environment';
+import {HttpClientModule} from "@angular/common/http"
 
 @NgModule({
   declarations: [
@@ -28,9 +31,18 @@ import { FiltroBindingComponent } from './components/shared/filtro-binding/filtr
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PruebaService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  /**
+   *
+   */
+  constructor() {
+    ConfigAccesor.GetConfig();
+    
+  }
+}

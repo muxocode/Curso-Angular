@@ -1,0 +1,6 @@
+{
+    "api":"http://localhost:3004",
+    "services":{
+        "usuarios":"usuarios"
+    }
+}
