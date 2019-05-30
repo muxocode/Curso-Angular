@@ -9,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class FiltroComponent implements OnInit {
   @Input() value;
   @Input() placeholder;
-  @Output() clicked= new EventEmitter
+  @Output() click= new EventEmitter
   constructor() { 
     if(!this.value){
       this.value="";
@@ -19,7 +19,7 @@ export class FiltroComponent implements OnInit {
   ngOnInit() {
   }
 
-  Presionado(e:Event){
-    this.clicked.emit((e.target as HTMLInputElement).value);
+  Presionado(e:Event, input:HTMLInputElement){
+    this.click.emit(input.value);
   }
 }

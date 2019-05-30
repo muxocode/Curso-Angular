@@ -1,3 +1,4 @@
 <div>
-  <input [placeholder]="placeholder" (change)="Presionado($event)"/>
+  <input #input [placeholder]="placeholder" />
+  <button (click)="Presionado($event, input)">filtrar</button>
 </div>
