@@ -8,6 +8,7 @@ import { UsuarioService } from './services/UsuarioService/usuario.service';
 import { ConfigAccesor } from 'src/environments/environment';
 import {HttpClientModule} from "@angular/common/http"
 
+
 ConfigAccesor.GetConfig();
 
 @NgModule({

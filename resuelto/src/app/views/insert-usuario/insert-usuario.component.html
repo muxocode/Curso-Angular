@@ -1,0 +1,8 @@
+<form>
+  <div>
+    <div>Nombre:<input [(ngModel)]="usuario.nombre" name="nombre"/></div>
+    <div>Age:<input [(ngModel)]="usuario.age" name="age"/></div>
+    <div>idRol:<input [(ngModel)]="usuario.idRol" name="idRol"/></div>
+  </div>
+  <button (click)="Guardar($event)">Guardar</button>
+</form>

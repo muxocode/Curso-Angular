@@ -13,7 +13,13 @@ export class UsuarioService {
   }
   Get(id:number=null):Promise<UsuarioModel[]|UsuarioModel>{
     return this.http
-    .get<UsuarioModel[]>(`${environment.api.api}/${environment.api.data.usuarios}/${id?"/"+id:""}`)
+    .get<UsuarioModel[]|UsuarioModel>(`${environment.api.api}/${environment.api.data.usuarios}/${id?"/"+id:""}`)
+    .toPromise();
+  }
+
+  Insert(obj:UsuarioModel){
+    return this.http
+    .post(`${environment.api.api}/${environment.api.data.usuarios}`, obj)
     .toPromise();
   }
 }

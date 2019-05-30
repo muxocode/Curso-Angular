@@ -8,6 +8,13 @@ import { AboutComponent } from './about/about.component';
 import { ItemUsuarioComponent } from './item-usuario/item-usuario.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { PruebaService } from '../services/prueba/prueba.service';
+import { InsertUsuarioComponent } from './insert-usuario/insert-usuario.component';
+import { FormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { UsuarioReducer } from '../redux/UsuarioReducer';
+import { EffectsModule } from '@ngrx/effects';
+import { UsuarioEffects } from '../redux/UsuarioEffects';
+import { UsuarioService } from '../services/UsuarioService/usuario.service';
 
 
 
@@ -17,12 +24,17 @@ import { PruebaService } from '../services/prueba/prueba.service';
     HomeComponent, 
     UsuariosComponent, 
     AboutComponent, 
-    ItemUsuarioComponent
+    ItemUsuarioComponent, 
+    InsertUsuarioComponent
   ],
   imports: [
     CommonModule,
     ComponentsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    //Redux
+    StoreModule.forRoot({Usuario:UsuarioReducer}),
+    EffectsModule.forRoot([UsuarioEffects])
   ],
   exports:[
     SemanaComponent,
@@ -32,7 +44,8 @@ import { PruebaService } from '../services/prueba/prueba.service';
     ItemUsuarioComponent
   ],
   providers:[
-    PruebaService
+    PruebaService,
+    UsuarioService
   ]
 })
 export class ViewsModule { }

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioModel } from '@entities/UsuarioModel';
 import { PruebaService } from 'src/app/services/prueba/prueba.service';
-import { UsuarioService } from 'src/app/services/UsuarioService/usuario.service';
+import { Store } from '@ngrx/store';
+import * as Actions from '../../redux/UsuarioAction';
+
 
 @Component({
   selector: 'usuarios',
@@ -19,8 +21,11 @@ export class UsuariosComponent implements OnInit {
   set Usuarios(val){
     this._Usuarios=val;
   }
-  constructor(private oPService:PruebaService, private UsuarioService:UsuarioService) { 
-
+  constructor(private oPService:PruebaService, private store: Store<UsuarioModel>) { 
+    this.store.select("Usuario").subscribe((x:UsuarioModel[])=>{
+      this.Usuarios= x.reverse();
+    });
+    this.store.dispatch(new Actions.Get());
   }
 
   get filtro(){
@@ -37,9 +42,9 @@ export class UsuariosComponent implements OnInit {
     /*for (let i = 1; i < 20; i++) {
       this.Usarios.push({id:i, nombre:`Usuario${i}`, age:i, idRol:i});
     }*/
-    this.UsuarioService.Get().then(x=>{
+    /*this.UsuarioService.Get().then(x=>{
       this.Usuarios=x;
-    })
+    })*/
   }
 
 }

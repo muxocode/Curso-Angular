@@ -13,7 +13,13 @@ export class UsuarioService {
     this.url=`${environment.config.api}/${environment.config.services.usuarios}`;
   }
 
-  Get():Promise<Usuario[]>{
-    return this.http.get<Usuario[]>(this.url).toPromise();
+  Get(id:number = null):Promise<Usuario[] | Usuario>{
+   
+    let oUrl = this.url;
+    if(id){
+      oUrl+=`/${id}`;
+    }
+
+    return this.http.get<Usuario[] | Usuario>(oUrl).toPromise();
   }
 }

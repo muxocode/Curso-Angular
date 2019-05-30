@@ -1,6 +1,13 @@
-<filtro [placeHolder]="placeHolder" [(value)]="filtro"></filtro>
-<ul>
-  <li *ngFor="let item of Usarios">
-    <a class="nav-link" routerLink="/Usuarios/{{item.id}}">{{item.nombre}}</a>
-  </li>
-</ul>
+<div class="row">
+  <div class="col-xs-6">
+  <filtro [placeHolder]="placeHolder" [(value)]="filtro"></filtro>
+  <ul>
+    <li *ngFor="let item of Usarios">
+      <a class="nav-link" routerLink="/Usuarios/{{item.id}}">{{item.nombre}}</a>
+    </li>
+  </ul>
+  </div>
+  <div class="col-xs-6">
+    <insert-usuario></insert-usuario>
+  </div>
+</div>

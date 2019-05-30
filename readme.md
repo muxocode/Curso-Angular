@@ -137,3 +137,5 @@ Y añadimos por ejemplo
 ```
 ## Referencias
 - https://cli.angular.io/
+## Redux
+- https://medium.com/@ogomez/guia-rapida-para-entender-el-patron-redux-y-angular-con-ngrx-e60d39d35f1b
