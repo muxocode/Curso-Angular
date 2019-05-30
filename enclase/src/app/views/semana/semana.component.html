@@ -1,4 +1,6 @@
-<filtro [placeholder]="filtroPlaceHolder" (click)="Filtrar($event)"></filtro>
+<!--<filtro [placeholder]="filtroPlaceHolder" (click)="Filtrar($event)"></filtro>-->
+<filtro-binding [placeholder]="filtroPlaceHolder" [(value)]="filtro"></filtro-binding>
+
 <div>
   <div *ngFor="let item of auxDias">
     <span>{{

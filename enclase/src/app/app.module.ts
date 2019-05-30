@@ -15,17 +15,20 @@ import { ItemUsuarioComponent } from './views/item-usuario/item-usuario.componen
 import { HijoComponent } from './components/hijo/hijo.component';
 import { PadreComponent } from './components/padre/padre.component';
 import { FiltroComponent } from './components/shared/filtro/filtro.component';
+import {FormsModule} from "@angular/forms";
+import { FiltroBindingComponent } from './components/shared/filtro-binding/filtro-binding.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     ContenidoComponent, 
-    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent, FiltroComponent
+    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent, FiltroComponent, FiltroBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

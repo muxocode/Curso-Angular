@@ -9,9 +9,18 @@ export class SemanaComponent implements OnInit {
 
   constructor() { }
   aDias= ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado", "Domingo"];
-  auxDias=[];
+  auxDias:string[]=[];
   filtroPlaceHolder="Día favorito...";
-  filtro="";
+  _filtro="";
+  get filtro(){
+    return this._filtro;
+  }
+
+  set filtro(val){
+    this._filtro=val;
+    this.Filtrar(val);
+  }
+
   ngOnInit() {
     this.auxDias=this.aDias;
   }
