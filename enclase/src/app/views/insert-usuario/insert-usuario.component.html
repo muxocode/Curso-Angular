@@ -1,0 +1,9 @@
+<div>
+  <form (submit)="Guardar($event)">
+    
+    <div>Nombre:<input [(ngModel)]="oUsuario.nombre" name="nombre"/></div>
+    <div>Age:<input [(ngModel)]="oUsuario.age" name="age"/></div>
+    <div>IdRol:<input [(ngModel)]="oUsuario.idRol" name="idRol"/></div>
+    <button type="submit">Guardar</button>
+  </form>
+</div>

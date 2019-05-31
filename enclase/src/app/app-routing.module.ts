@@ -7,6 +7,7 @@ import { HomeComponent } from './views/home/home.component';
 import { UsuariosComponent } from './views/usuarios/usuarios.component';
 import { AboutComponent } from './views/about/about.component';
 import { ItemUsuarioComponent } from './views/item-usuario/item-usuario.component';
+import { InsertUsuarioComponent } from './views/insert-usuario/insert-usuario.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:"Usuarios", component:UsuariosComponent},
   {path:"Usuarios/:id", component:ItemUsuarioComponent},
   {path:"About", component:AboutComponent},
+  {path:"InsertarUsuario", component:InsertUsuarioComponent},
   {path:"**", redirectTo:""}
 ];
 

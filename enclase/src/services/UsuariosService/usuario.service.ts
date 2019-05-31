@@ -22,4 +22,9 @@ export class UsuarioService {
 
     return this.http.get<Usuario[] | Usuario>(oUrl).toPromise();
   }
+
+  Insert(obj:Usuario):Promise<Usuario>{
+    return this.http.post<Usuario>(this.url, obj)
+                .toPromise();
+  }
 }

@@ -21,13 +21,14 @@ import { PruebaService } from 'src/services/PruebaService/prueba.service';
 import { ConfigAccesor } from 'src/environments/environment';
 import {HttpClientModule} from "@angular/common/http"
 import { UsuarioService } from 'src/services/UsuariosService/usuario.service';
+import { InsertUsuarioComponent } from './views/insert-usuario/insert-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     ContenidoComponent, 
-    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent, FiltroComponent, FiltroBindingComponent
+    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent, FiltroComponent, FiltroBindingComponent, InsertUsuarioComponent
   ],
   imports: [
     BrowserModule,

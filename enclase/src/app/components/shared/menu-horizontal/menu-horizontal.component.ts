@@ -18,8 +18,8 @@ export class MenuHorizontalComponent implements OnInit {
       {name:"Usuarios", url:"Usuarios"},
       {name:"About", url:"About"},
       {name:"Semana", url:"Semana"},
-      {name:"Hello", url:"Hello"}
-
+      {name:"Hello", url:"Hello"},
+      {name:"Insertar Usuario", url:"InsertarUsuario"}
     ]
   }
 
