@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '@model/Usuario';
 import { UsuarioService } from 'src/services/UsuariosService/usuario.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'insert-usuario',
@@ -9,18 +9,43 @@ import { Router } from '@angular/router';
   styleUrls: ['./insert-usuario.component.css']
 })
 export class InsertUsuarioComponent implements OnInit {
-
-  constructor(private UsuarioService:UsuarioService, private router: Router) { }
   oUsuario = new Usuario();
+  id?:number;
+
+  constructor(
+    private UsuarioService:UsuarioService, 
+    private router: Router,
+    private oRuta: ActivatedRoute
+    ) { 
+      this.oRuta.params.subscribe(params=>{
+        if(params){
+          this.id=params.id;
+          if(this.id){
+            this.UsuarioService.Get(this.id).then(u=>{
+              this.oUsuario=u as Usuario;
+            })
+          }
+        }
+      })
+    }
+  
   ngOnInit() {
   }
 
   Guardar(e:Event){
-
-
-    debugger;
     e.preventDefault();
-    this.UsuarioService.Insert(this.oUsuario)
+
+    let oPromise:Promise<Usuario>;
+
+    if(this.id){
+      oPromise= this.UsuarioService.Update(this.id,this.oUsuario);
+    }
+    else
+    {
+      oPromise= this.UsuarioService.Insert(this.oUsuario);     
+    }
+
+    oPromise
     .then(x=>{
       //Navegar
       this.router.navigateByUrl("/Usuarios");

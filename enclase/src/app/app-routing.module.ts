@@ -18,6 +18,8 @@ const routes: Routes = [
   {path:"Usuarios/:id", component:ItemUsuarioComponent},
   {path:"About", component:AboutComponent},
   {path:"InsertarUsuario", component:InsertUsuarioComponent},
+  {path:"ActualizarUsuario/:id", component:InsertUsuarioComponent},
+
   {path:"**", redirectTo:""}
 ];
 

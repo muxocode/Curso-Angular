@@ -27,4 +27,12 @@ export class UsuarioService {
     return this.http.post<Usuario>(this.url, obj)
                 .toPromise();
   }
+
+  Update(id:number, obj:Usuario):Promise<Usuario>{
+    let oUrl = this.url;
+      oUrl+=`/${id}`;
+
+    return this.http.put<Usuario>(oUrl, obj)
+                .toPromise();
+  }
 }

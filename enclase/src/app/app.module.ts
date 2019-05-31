@@ -22,13 +22,15 @@ import { ConfigAccesor } from 'src/environments/environment';
 import {HttpClientModule} from "@angular/common/http"
 import { UsuarioService } from 'src/services/UsuariosService/usuario.service';
 import { InsertUsuarioComponent } from './views/insert-usuario/insert-usuario.component';
+import { PipePruebaPipe } from './pipes/pipeprueba/pipe-prueba.pipe';
+import { BoolPipe } from './pipes/bool/bool.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     ContenidoComponent, 
-    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent, FiltroComponent, FiltroBindingComponent, InsertUsuarioComponent
+    MenuHorizontalComponent, SemanaComponent, HelloComponent, HomeComponent, UsuariosComponent, AboutComponent, ItemUsuarioComponent, HijoComponent, PadreComponent, FiltroComponent, FiltroBindingComponent, InsertUsuarioComponent, PipePruebaPipe, BoolPipe
   ],
   imports: [
     BrowserModule,

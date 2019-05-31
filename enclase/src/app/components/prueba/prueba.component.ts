@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PruebaService } from 'src/services/PruebaService/prueba.service';
 
+interface IEstilo{
+  color:string
+}
+
 @Component({
   selector: 'prueba',
   templateUrl: './prueba.component.html',
@@ -14,7 +18,7 @@ export class PruebaComponent implements OnInit {
   aLista=[{name:"a"}, {name:"b"}, {name:"c"}];
   sPlaceholder="Escriba aquí...";
   sValue="hola";
-
+  oEstilo:IEstilo={color:"blue"}
 
   constructor(private PService:PruebaService) {
 

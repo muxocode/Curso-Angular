@@ -18,3 +18,26 @@
 <input [placeholder]="sPlaceholder" [value]="sValue"/>
 
 <padre></padre>
+
+<div>
+  {{"Hola mundo" | uppercase | pipePrueba:2 }}
+</div>
+
+<div>
+    {{"Hola mundo" | pipePrueba:4 }}
+  </div>
+
+  <div>
+      {{true | boolPipe:"SI":"NO" }}
+      {{false | boolPipe:"Aprobado":"Suspenso" }}
+      {{null | boolPipe:"Aprobado":"Suspenso" }}
+
+    </div>
+
+<div [ngStyle]="{'color': 'red'}">
+  Directiva
+</div>
+
+<div [ngStyle]="3>4?oEstilo:{'color': 'olive'}">
+    Directiva2
+  </div>
