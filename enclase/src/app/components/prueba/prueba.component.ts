@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PruebaService } from 'src/services/PruebaService/prueba.service';
 
 interface IEstilo{
@@ -10,7 +10,7 @@ interface IEstilo{
   templateUrl: './prueba.component.html',
   styleUrls: ['./prueba.component.css']
 })
-export class PruebaComponent implements OnInit {
+export class PruebaComponent implements OnInit, OnDestroy {
 
   texto:string
   mostrarImg=true;
@@ -58,6 +58,12 @@ export class PruebaComponent implements OnInit {
   Encima(e:Event){
     let oDiv = e.target as HTMLDivElement;
     oDiv.style.color="red";
+  }
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    
   }
 
 }
